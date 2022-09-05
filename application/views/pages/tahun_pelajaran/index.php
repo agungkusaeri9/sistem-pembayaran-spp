@@ -1,0 +1,72 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <div class="d-flex justify-content-between">
+                        <h5>Data Tahun Pelajaran</h5>
+                        <a href="<?= base_url('tahun_pelajaran/create') ?>" class="btn btn-primary">Tambah Tahun Pelajaran</a>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <table class="table dtable table-bordered table-hover table-striped">
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Nama</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                                $i = 1;
+                            ?>
+                            <?php foreach($tahun_pelajaran as $tp) : ?>
+                            <tr>
+                                <td style="width:10px;" class="text-center"><?= $i++ ?></td>
+                                <td><?= $tp->tahun ?></td>
+                                <td>
+									<a href="<?= base_url('tahun_pelajaran/edit/') . $tp->id_tahun_pelajaran ?>" class="btn btn-sm btn-info"><i class="fas fa-edit"></i> Edit</a>
+									<form action="" method="post" id="formDelete" class="d-inline">
+										<button class="btn btn-sm btn-danger btnDelete" data-id="<?= $tp->id_tahun_pelajaran ?>"><i class="fas fa-trash"></i> Hapus</button>
+									</form>
+								</td>
+                            </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="<?= base_url() ?>assets/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="<?= base_url() ?>assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="<?= base_url() ?>assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="<?= base_url() ?>assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script>
+	$(function(){
+		$('.dtable').DataTable();
+		$('body').on('click','.btnDelete', function(e){
+            var id = $(this).data('id');
+			e.preventDefault();
+			Swal.fire({
+			title: 'Apakah anda yakin ingin menghapus data ini?',
+			text: "Data yang sudah dihapus tidak bisa dikembalikan lagi!",
+			icon: 'warning',
+			showCancelButton: true,
+			confirmButtonColor: '#3085d6',
+			cancelButtonColor: '#d33',
+			confirmButtonText: 'Yes, delete it!'
+			}).then((result) => {
+			if (result.isConfirmed) {
+                $('#formDelete').attr('action','<?= base_url('tahun_pelajaran/delete/') ?>' + id)
+				$('#formDelete').submit();
+				}
+			})
+		})
+		
+	})
+</script>
+<?php $this->load->view('layouts/partials/alert'); ?>
+
