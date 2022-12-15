@@ -13,7 +13,7 @@ class Auth extends CI_Controller{
 
     public function index()
     {
-        $data['title'] = 'Login | SMA Muhammadiyah Sambas';
+        $data['title'] = 'Login | SMK Citeko Kaler';
         $data['content'] = 'auth/pages/login';
         $this->load->view('auth/layouts/app',$data);
     }
@@ -63,7 +63,7 @@ class Auth extends CI_Controller{
 
     public function register()
     {
-        $data['title'] = 'Register | SMA Muhammadiyah Sambas';
+        $data['title'] = 'Register | SMK Citeko Kaler';
         $data['content'] = 'auth/pages/register';
         $this->load->view('auth/layouts/app',$data);
     }

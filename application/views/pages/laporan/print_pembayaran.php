@@ -42,7 +42,7 @@
 			<div class="row justify-content-center mt-3">
 				<div class="col-md-12">
 					<div style="font-size: 14px; font-weight: 600" class="text-center">
-						MAJELIS PENDIDIKAN DASAR DAN MENENGAH MUHAMMADIYAH <br> SMA MUHAMMADIYAH SAMBAS <br> Jalan Masudi Tumuk Manggis Sambas (0562) 393137
+						MAJELIS PENDIDIKAN DASAR DAN MENENGAH MUHAMMADIYAH <br> SMK Citeko Kaler <br> Jalan Citeko Kaler Plered Purwakarta (0545) 398753
 					</div>
 				</div>
 			</div>

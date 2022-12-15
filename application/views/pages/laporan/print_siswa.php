@@ -197,10 +197,10 @@
 				<div class="d-flex justify-content-end">
 					<div class="text-center">
 						<div>SAMBAS, <?= $tanggal ?></div>
-						<div>KEPALA SMA MUHAMMADIYAH SAMBAS</div>
+						<div>KEPALA SMK Citeko Kaler</div>
 						<div style="margin-top:80px">
-							<ins>AHKAM MUAWIS, S.PD I</ins>
-							<div>NBM. 1050698</div>
+							<ins>AGUNG KUSAERI, S.PD I</ins>
+							<div>NBM. 10535323</div>
 						</div>
 					</div>
 				</div>

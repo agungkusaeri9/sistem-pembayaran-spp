@@ -1,7 +1,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
 	<!-- Brand Logo -->
 	<a href="<?= base_url('dashboard') ?>" class="brand-link text-center mt-4">
-		<img src="<?= base_url('assets/gambar/logo.png') ?>" alt="" class="img-fluid" style="max-height: 80px;">
+		<img src="<?= base_url('assets/gambar/logo2.png') ?>" alt="" class="img-fluid" style="max-height: 80px;">
 		<br>
 		<span class="brand-text font-weight-light mx-3" style="font-size: 26px;">Pembayaran SPP</span>
 	</a>
